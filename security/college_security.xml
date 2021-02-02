@@ -1,0 +1,39 @@
+<odoo>
+<!-- group manager -->
+
+    <record id ="grp_branch" model="res.groups">
+        <field name="name">College Branch</field>
+    </record>
+
+    <record id ="grp_student" model="res.groups">
+        <field name="name">College Student</field>
+    </record>
+
+    <record id ="grp_staff" model="res.groups">
+        <field name="name">College Professor</field>
+    </record>
+
+    <record id ="grp_jobposition" model="res.groups">
+        <field name="name">College Job Position</field>
+    </record>
+
+    <record id ="grp_event" model="res.groups">
+        <field name="name">College Event</field>
+    </record>
+
+    <record id ="grp_semester" model="res.groups">
+        <field name="name">College Semester</field>
+    </record>
+
+     <record id ="grp_event_registration" model="res.groups">
+        <field name="name">College Event Registration</field>
+    </record>
+
+     <record id ="grp_event_participant" model="res.groups">
+        <field name="name">College Event Participant</field>
+    </record>
+
+    <record id ="grp_event_category" model="res.groups">
+        <field name="name">College Event Category</field>
+    </record>
+</odoo>

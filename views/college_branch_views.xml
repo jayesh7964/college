@@ -1,0 +1,61 @@
+<odoo>
+    <!-- Form View of College Branch -->
+    <record id ="view_college_branch_form" model="ir.ui.view">
+        <field name="name">view.college.branch.form</field>
+        <field name="model">college.branch</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <div class="oe_button_box" name="button_box">
+                        <button class="oe_stat_button" name="btn_staff"
+                                type="object" icon="fa-graduation-cap">
+                            <field name="staff_count" string="staff" widget="statinfo"/>
+                        </button>
+                    </div>
+                    <group>
+                        <field name="name"/>        <!--placeholder="enter branch name"-->
+                        <field name="code"/>        <!-- readonly="1"-->
+                        <field name="contact_person"/>
+                        <field name="contact"/>     <!--invisible="1"-->
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- ================================================================== -->
+    <!--Tree view College Branch-->
+    <record id ="view_college_branch_tree" model="ir.ui.view">
+        <field name="name">view.college.branch.tree</field>
+        <field name="model">college.branch</field>
+        <field name="arch" type="xml">
+        <tree>
+            <field name="name"/>
+            <field name="code"/>
+            <field name="contact_person"/>
+            <field name="contact" widget="phone"/>     <!-- password="true"-->
+        </tree>
+        </field>
+    </record>
+
+
+    <!-- ================================================================== -->
+    <!--Action of College Branch-->
+    <record id ="action_college_branch" model="ir.actions.act_window">
+        <field name="name">Branches</field>
+        <field name="res_model">college.branch</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+
+    <!-- ================================================================== -->
+    <!-- Menu os Application -->
+    <menuitem id="menu_college" name="College"/>
+<!--    <menuitem id="menu_branch" name="Branches" action="action_college_branch" parent="menu_college"/>-->
+
+    <menuitem id="menu_branches" name="Branch" parent="menu_college"/>
+    <menuitem id="menu_branch" name="Branches" action="action_college_branch" parent="menu_branches"/>
+
+
+
+</odoo>

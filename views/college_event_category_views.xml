@@ -1,0 +1,46 @@
+<odoo>
+    <!-- Form View of College Event Category -->
+    <record id ="view_college_event_category_form" model="ir.ui.view">
+        <field name="name">view.college.event.category.form</field>
+        <field name="model">college.event.category</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="category"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- ================================================================== -->
+    <!--Tree view College event.category-->
+    <record id ="view_college_event_category_tree" model="ir.ui.view">
+        <field name="name">view.college.event.category.tree</field>
+        <field name="model">college.event.category</field>
+        <field name="arch" type="xml">
+        <tree>
+            <field name="category"/>
+        </tree>
+        </field>
+    </record>
+
+
+    <!-- ================================================================== -->
+    <!--Action of College event.category-->
+    <record id ="action_college_event_category" model="ir.actions.act_window">
+        <field name="name">Event Category</field>
+        <field name="res_model">college.event.category</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+
+    <!-- ================================================================== -->
+    <!-- Menu os Application -->
+<!--    <menuitem id="menu_college" name="College"/>-->
+    <menuitem id="menu_event_category" name="Event Category" action="action_college_event_category" parent="menu_event_detail"/>
+
+
+
+</odoo>

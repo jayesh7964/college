@@ -1,0 +1,70 @@
+<odoo>
+    <!-- Form View of College student -->
+    <record id ="view_college_student_form" model="ir.ui.view">
+        <field name="name">view.college.student.form</field>
+        <field name="model">college.student</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                    <button name="btn_self" type="object" string="SelfEnv"/>
+                    <button name="btn_mapped" type="object" string="SelfMapped"/>
+                    <button name="btn_filter" type="object" string="SelfFilter"/>
+                    <button name="btn_sorted" type="object" string="SelfSorted"/>
+                </header>
+                <sheet>
+                    <field name="image" widget="image" class="oe_right oe_avatar"/>    <!-- style="width:200px;height:200px;"-->
+                    <group>
+                        <group>
+                            <field name="name"/>
+                            <field name="birthdate"/>
+                            <field name="gender" widget="radio"/>
+                            <field name="student_code"/>
+                            <field name="semester_id"/>
+                            <field name="branch_id"/>
+                        </group>
+                        <group>
+                            <field name="contact"/>
+                            <field name="email"/>
+                            <field name="adress"/>
+                            <field name="state"/>
+                            <field name="country"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- ================================================================== -->
+    <!--Tree view College student-->
+    <record id ="view_college_student_tree" model="ir.ui.view">
+        <field name="name">view.college.student.tree</field>
+        <field name="model">college.student</field>
+        <field name="arch" type="xml">
+        <tree>
+<!--            editable="top"-->
+            <field name="name"/>
+            <field name="contact"/>
+            <field name="email"/>
+
+        </tree>
+        </field>
+    </record>
+
+
+    <!-- ================================================================== -->
+    <!--Action of College student-->
+    <record id ="action_college_student" model="ir.actions.act_window">
+        <field name="name">Student</field>
+        <field name="res_model">college.student</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+
+    <!-- ================================================================== -->
+    <!-- Menu os Application -->
+<!--    <menuitem id="menu_college" name="College"/>-->
+    <menuitem id="menu_student" name="Student" action="action_college_student" parent="menu_college"/>
+
+
+</odoo>

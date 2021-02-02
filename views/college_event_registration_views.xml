@@ -1,0 +1,50 @@
+<odoo>
+    <!-- Form View of College event registration -->
+    <record id ="view_college_event_registration_form" model="ir.ui.view">
+        <field name="name">view.college.event.registration.form</field>
+        <field name="model">college.event.registration</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="semester"/>
+                        <field name="branch"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- ================================================================== -->
+    <!--Tree view College event registration-->
+    <record id ="view_college_event_registration_tree" model="ir.ui.view">
+        <field name="name">view.college.event.registration.tree</field>
+        <field name="model">college.event.registration</field>
+        <field name="arch" type="xml">
+        <tree>
+            <field name="name"/>
+            <field name="semester"/>
+            <field name="branch"/>
+        </tree>
+        </field>
+    </record>
+
+
+    <!-- ================================================================== -->
+    <!--Action of College event registration-->
+<!--    <record id ="action_college_event_registration" model="ir.actions.act_window">-->
+<!--        <field name="name">Event Registration</field>-->
+<!--        <field name="res_model">college.event.registration</field>-->
+<!--        <field name="view_mode">tree,form</field>-->
+<!--    </record>-->
+
+
+    <!-- ================================================================== -->
+    <!-- Menu os Application -->
+
+<!--    <menuitem id="menu_event_registration" name="Event Registration" action="action_college_event_registration" parent="menu_event_detail"/>-->
+
+
+
+</odoo>

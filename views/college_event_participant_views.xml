@@ -1,0 +1,50 @@
+<odoo>
+    <!-- Form View of College Event participant -->
+    <record id ="view_college_event_participant_form" model="ir.ui.view">
+        <field name="name">view.college.event.participant.form</field>
+        <field name="model">college.event.participant</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="event_id"/>
+                        <field name="number_of_participant"/>
+                        <field name="event_regi_id"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- ================================================================== -->
+    <!--Tree view College event.participant-->
+    <record id ="view_college_event_participant_tree" model="ir.ui.view">
+        <field name="name">view.college.event.participant.tree</field>
+        <field name="model">college.event.participant</field>
+        <field name="arch" type="xml">
+        <tree>
+            <field name="event_id"/>
+            <field name="number_of_participant"/>
+            <field name="event_regi_id"/>
+        </tree>
+        </field>
+    </record>
+
+
+    <!-- ================================================================== -->
+    <!--Action of College event.participant-->
+    <record id ="action_college_event_participant" model="ir.actions.act_window">
+        <field name="name">Event Participant</field>
+        <field name="res_model">college.event.participant</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+
+    <!-- ================================================================== -->
+    <!-- Menu os Application -->
+<!--    <menuitem id="menu_college" name="College"/>-->
+    <menuitem id="menu_event_participant" name="Event Participant" action="action_college_event_participant" parent="menu_event_detail"/>
+
+
+
+</odoo>

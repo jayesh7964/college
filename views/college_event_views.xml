@@ -1,0 +1,77 @@
+<odoo>
+    <!-- Form View of College event -->
+    <record id ="view_college_event_form" model="ir.ui.view">
+        <field name="name">view.college.event.form</field>
+        <field name="model">college.event</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                                       <!--Object button-->
+
+                    <button name="btn_confirm" type="object" string="Confirm" states="pending"/>
+                    <button name="btn_cancel" type="object" string="cancel" states="confirmed"/>
+                    <field name="state" widget="statusbar" clickable="1"/>
+                </header>
+                <sheet>
+                                        <!--Action button-->
+
+                    <button name="%(action_college_branch)d" type="action" string="move to branch"/>
+                    <button name="%(action_college_student)d" type="action" string="move to student"/>
+
+                    <group>
+                        <group>
+                            <field name="name"/>
+                            <field name="category_id"/>
+                            <field name="date"/>
+                            <field name="duration" widget="float_time"/>
+                            <field name="venue"/>
+                        </group>
+                         <group>
+                            <field name="manager"/>
+                            <field name="entry_fees"/>
+                            <field name="discount" readonly="1"/>
+                            <field name="actual_fees"/>
+                         </group>
+                         <strong>Event Discription</strong><field name="discription"/>
+                    </group>
+<!--                    <notebook>-->
+<!--                        <page string="Participant Detail">-->
+<!--                            <field name="event_regi_ids"/>-->
+<!--                        </page>-->
+<!--                    </notebook>-->
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- ================================================================== -->
+    <!--Tree view College event-->
+    <record id ="view_college_event_tree" model="ir.ui.view">
+        <field name="name">view.college.event.tree</field>
+        <field name="model">college.event</field>
+        <field name="arch" type="xml">
+        <tree>
+            <field name="name"/>
+            <field name="manager"/>
+        </tree>
+        </field>
+    </record>
+
+
+    <!-- ================================================================== -->
+    <!--Action of College event-->
+    <record id ="action_college_event" model="ir.actions.act_window">
+        <field name="name">Event</field>
+        <field name="res_model">college.event</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+
+    <!-- ================================================================== -->
+    <!-- Menu os Application -->
+    <menuitem id="menu_event_detail" name="Event Detail" parent="menu_college"/>
+    <menuitem id="menu_event" name="Event" action="action_college_event" parent="menu_event_detail"/>
+
+
+
+</odoo>

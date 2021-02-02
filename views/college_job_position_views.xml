@@ -1,0 +1,48 @@
+<odoo>
+    <!-- Form View of College job_position -->
+    <record id ="view_college_job_position_form" model="ir.ui.view">
+        <field name="name">view.college.job.position.form</field>
+        <field name="model">college.job.position</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="code"/>         <!--placeholder="Enter your contact number"-->
+
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- ================================================================== -->
+    <!--Tree view College job_position-->
+    <record id ="view_college_job_position_tree" model="ir.ui.view">
+        <field name="name">view.college.job.position.tree</field>
+        <field name="model">college.job.position</field>
+        <field name="arch" type="xml">
+        <tree>
+            <field name="name"/>
+            <field name="code"/>
+        </tree>
+        </field>
+    </record>
+
+
+    <!-- ================================================================== -->
+    <!--Action of College job_position-->
+    <record id ="action_college_job_position" model="ir.actions.act_window">
+        <field name="name">Job Position</field>
+        <field name="res_model">college.job.position</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+
+    <!-- ================================================================== -->
+    <!-- Menu os Application -->
+<!--    <menuitem id="menu_staff" name="Staff" parent="menu_college"/>-->
+    <menuitem id="menu_job_position" name="Job Position" action="action_college_job_position" parent="menu_college"/>
+
+
+</odoo>

@@ -1,0 +1,10 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_college_branch,access.college.branch,model_college_branch,grp_branch,1,1,1,1
+access_college_student,access.college.student,model_college_student,grp_student,1,1,1,1
+access_college_staff,access.college.staff,model_college_staff,grp_staff,1,1,1,1
+access_college_job_position,access.college.job.position,model_college_job_position,grp_jobposition,1,1,1,1
+access_college_event,access.college.event,model_college_event,grp_event,1,1,1,1
+access_college_semester,access.college.semester,model_college_semester,grp_semester,1,1,1,1
+access_college_event_registration,access.college.event.registration,model_college_event_registration,grp_event_registration,1,1,1,1
+access_college_event_participant,access.college.event.participant,model_college_event_participant,grp_event_participant,1,1,1,1
+access_college_event_category,access.college.event.category,model_college_event_category,grp_event_category,1,1,1,1
